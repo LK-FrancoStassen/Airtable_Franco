@@ -1,1 +1,149 @@
+# 📘 Application Context: Staff Management System
+## Company: Lancea Konsult
 
+---
+
+## 🧭 Overview
+This application is designed to manage and track staff information for Lancea Konsult.  
+It will serve as a centralized system to store, update, and report on employee-related data, including personal details, medical information, and important dates.
+
+---
+
+## 🎯 Objectives
+- Maintain a single source of truth for all staff data
+- Track key employee lifecycle information
+- Enable reporting and reminders (e.g., birthdays, medical renewals)
+- Ensure data security and controlled access
+
+---
+
+## 👥 Core Entities
+
+### 1. Employee
+Primary entity representing each staff member.
+
+**Fields:**
+- EmployeeID (Primary Key)
+- FirstName
+- LastName
+- IDNumber / PassportNumber
+- DateOfBirth
+- Gender
+- ContactNumber
+- EmailAddress
+- PhysicalAddress
+- EmploymentStartDate
+- EmploymentEndDate (nullable)
+- Department
+- JobTitle
+- ManagerID (Foreign Key to Employee)
+
+---
+
+### 2. Medical Information
+Stores sensitive health-related data for compliance and emergency purposes.
+
+**Fields:**
+- MedicalRecordID (Primary Key)
+- EmployeeID (Foreign Key)
+- MedicalAidProvider
+- MedicalAidNumber
+- Allergies
+- ChronicConditions
+- EmergencyContactName
+- EmergencyContactNumber
+- LastMedicalCheckupDate
+- Notes
+
+---
+
+### 3. Important Dates
+Tracks key events for reminders and reporting.
+
+**Fields:**
+- EventID (Primary Key)
+- EmployeeID (Foreign Key)
+- EventType (e.g., Birthday, Work Anniversary, Certification Expiry)
+- EventDate
+- Notes
+
+---
+
+### 4. Documents
+Stores references to uploaded files.
+
+**Fields:**
+- DocumentID (Primary Key)
+- EmployeeID (Foreign Key)
+- DocumentType (e.g., ID Copy, Contract, Medical Certificate)
+- FilePath / URL
+- UploadDate
+- ExpiryDate (nullable)
+
+---
+
+## 🔐 Security & Compliance
+- Medical data must be access-restricted (role-based access control)
+- Sensitive fields should be encrypted where applicable
+- Audit logs required for:
+  - Record creation
+  - Updates
+  - Deletions
+
+---
+
+## 🔄 Functional Requirements
+
+### Core Features
+- Add / Update / Delete Employee Records
+- View employee profiles
+- Upload and manage documents
+- Track medical information
+- Generate reports
+
+### Notifications / Automation
+- Birthday reminders
+- Work anniversary alerts
+- Medical checkup reminders
+- Document expiry alerts
+
+---
+
+## 📊 Reporting Requirements
+- Upcoming birthdays (next 30 days)
+- Staff count by department
+- Employees with missing medical information
+- Expiring documents
+- Staff tenure analysis
+
+---
+
+## 🧱 Suggested Tech Stack (Flexible)
+- **Frontend:** React / Power Apps / Web App
+- **Backend:** Node.js / .NET / Python
+- **Database:** SQL Server / PostgreSQL
+- **Automation:** Power Automate / Cron Jobs
+
+---
+
+## 🧩 Future Enhancements
+- Leave management module
+- Payroll integration
+- Performance tracking
+- Employee self-service portal
+- Mobile app support
+
+---
+
+## ⚠️ Assumptions
+- All employees have a unique identifier
+- HR/admin users will manage the system
+- Data privacy laws (e.g., POPIA) must be followed
+
+---
+
+## 📝 Notes
+This document serves as a high-level context reference for developers and stakeholders.  
+It should evolve as requirements become more detailed.
+
+---
