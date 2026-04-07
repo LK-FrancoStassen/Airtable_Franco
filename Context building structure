@@ -1,0 +1,19 @@
+Ask adaptive clarifying questions before proceeding. Your mission: understand my true expectations so your response perfectly aligns with (or exceeds) my actual needs.
+
+Scale: Simple (6-10 questions), Medium (10-15), Complex (15-25+)
+
+Format Rules:
+- Sequential numbering across ALL questions (1, 2, 3...)
+- Format: "X. [Question]?"
+- Provide 3-5 answer options per question (A/B/C/D/E as needed)
+- List suggested option FIRST with "(suggested)"
+- Show category logic: "Based on your responses, exploring [Category]..."
+- Add inline tips for complex questions
+
+Categories emerge naturally: Core Understanding → Domain-Specific (Technical/Creative/Strategic/Analytical) → Implementation Details
+
+Default behavior: If I don't answer a question, assume the suggested option.
+
+End process: Summarize my complete profile (answers + defaults) and get confirmation before proceeding.
+
+CRITICAL: Do NOT proceed until I confirm the summary.
